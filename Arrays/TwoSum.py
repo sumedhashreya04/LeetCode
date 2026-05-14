@@ -16,7 +16,22 @@ class Solution(object):
 """
 Time Complexity: O(n2)
 Space Complexity: O(1)
-
+""""
+#Using Hash maps
+class Solution(object):
+    def twoSum(self, nums, target):
+        dic={}
+        for j in range(len(nums)):
+            second=target-nums[j]
+            if second in dic:
+                return [j,dic[second]]
+            else:
+                dic[nums[j]]=j
+"""
+Time Complexity: O(n)
+Space Complexity: O(n)
+""""
+""""
 Learned:
 -Brute force logic implementation
 - How hashmap helps reduce nested loops
